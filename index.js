@@ -48,6 +48,11 @@ const questions = [
         message: "What is your email address",
         name: "email",
     },
+    {
+        type: "imput",
+        message: "Testing requirements for the project",
+        name: "test",
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -60,7 +65,7 @@ function writeToFile(fileName, data)
 function init() {
     inquirer.prompt(questions).then(answers =>
 
-    writeToFile('/readme.md',generateMarkdown(answers)))
+    writeToFile('/output/readme.md',generateMarkdown(answers)))
 }
 
 // Function call to initialize app
